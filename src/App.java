@@ -28,11 +28,11 @@ public class App {
         {            
             count++;
         }
-        else if (number2 ==7)
+        if (number2 ==7)
         {
             count++;
         }
-        else if (number3 == 7)
+        if (number3 == 7)
         {
             count++;
         }          
@@ -43,14 +43,14 @@ public class App {
             System.out.println(money);
         }
         
-            else if (count == 2)
+            if (count == 2)
                 {
                 System.out.println("You won");
                 money = money + 5; 
                 System.out.println(money);
                 }
-           
-            else if (count == 3)
+                
+            if (count == 3)
         
                 {
                 System.out.println("You won"); 
@@ -64,7 +64,15 @@ public class App {
             
             System.out.println("If you want to play again?");
 
+
             playAgain = in.nextLine();
+            if (money == 0)
+            {
+                System.out.println("Game end");
+                
+                break;
+
+            }
             if (playAgain.equalsIgnoreCase("N"))
                 {
                     System.out.println("End game");    
@@ -76,13 +84,7 @@ public class App {
             count = 0;
             System.out.println (number1 + " "  + number2 + " " + number3 );
             
-            if (money == 0)
-            {
-                System.out.println("Game end");
-                
-                break;
-
-            }
+            
             
             
         
